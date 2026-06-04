@@ -1,0 +1,11 @@
+{% extends 'hotel/base.html' %}
+
+{% block title %}Order Success{% endblock %}
+
+{% block content %}
+<div class="container text-center mt-5">
+    <h1 class="text-success mb-3">✅ Order placed successfully!</h1>
+    <p class="lead">Thank you for ordering with Bhavani Food Center.</p>
+    <a href="{% url 'menu' %}" class="btn btn-success mt-3">Back to Menu</a>
+</div>
+{% endblock %}

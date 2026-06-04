@@ -1,0 +1,73 @@
+{% extends 'hotel/base.html' %}
+{% load static %}
+{% block title %}Login{% endblock %}
+
+{% block content %}
+
+<style>
+    body {
+        background-color: #f7f3e9; /* Light cream background */
+    }
+
+    .login-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 85vh;
+    }
+
+    .login-card {
+        width: 380px;
+        background: white;
+        padding: 25px;
+        border-radius: 15px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        text-align: center;
+    }
+
+    .login-heading {
+        color: #d35400;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+
+    .btn-custom {
+        background-color: #d35400;
+        color: white;
+        font-weight: bold;
+    }
+
+    .btn-custom:hover {
+        background-color: #b54300;
+    }
+
+   
+</style>
+
+<div class="login-container">
+    <div class="login-card">
+
+        
+
+        <h3 class="login-heading">LOGIN TO BHAVANI FOOD CENTER</h3>
+
+        <form method="POST">
+            {% csrf_token %}
+
+            <div class="mb-3 text-start">
+                <label class="form-label">Username</label>
+                <input type="text" name="username" class="form-control" required>
+            </div>
+
+            <div class="mb-3 text-start">
+                <label class="form-label">Password</label>
+                <input type="password" name="password" class="form-control" required>
+            </div>
+
+            <button type="submit" class="btn btn-custom w-100 mt-2">Login</button>
+        </form>
+
+    </div>
+</div>
+
+{% endblock %}

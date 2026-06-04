@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>READY MY FOOD - Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'hotel-home' %}">READY MY FOOD</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    {% if user.is_authenticated %}
+                        <li class="nav-item"><a class="nav-link" href="{% url 'hotel-home' %}">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'menu' %}">Menu</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'order' %}">Order</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'logout' %}">Logout</a></li>
+                    {% else %}
+                        <li class="nav-item"><a class="nav-link" href="{% url 'login' %}">Login</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'register' %}">Sign Up</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container mt-5 text-center">
+        <h1 class="text-success">🍽️ WELCOME TO BHAVANI FOOD CENTER!</h1>
+        <p class="lead">Your Favorite hotel ordering system.</p>
+        {% if user.is_authenticated %}
+            <a href="{% url 'menu' %}" class="btn btn-success mt-3">View Menu</a>
+        {% else %}
+            <a href="{% url 'login' %}" class="btn btn-success mt-3">Login to Order</a>
+        {% endif %}
+    </div>
+</body>
+</html>
