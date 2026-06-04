@@ -1,31 +1,43 @@
 # ReadyMyFood
 
-A Django-based food ordering and management application.
+ReadyMyFood is a Django-based food ordering and management system that allows users to browse menu items, place orders, and manage their accounts.
 
 ## Features
-- User Registration and Login
-- Food Menu Management
-- Order Placement
-- Admin Dashboard
-- User Profile Management
+
+* User Registration and Login
+* User Profile Management
+* Food Menu Display
+* Order Placement
+* Admin Dashboard
+* Django Authentication System
 
 ## Technologies Used
-- Python
-- Django
-- HTML
-- SQLite
+
+* Python
+* Django
+* HTML
+* SQLite
 
 ## Project Structure
-- accounts/ : User authentication and profile management
-- hotel/ : Food ordering and menu management
-- templates/ : HTML templates
 
-## How to Run
-1. Install dependencies:
+* accounts/ - User authentication and profile management
+* hotel/ - Food ordering and menu management
+* manage.py - Django project entry point
+
+## Installation
+
+1. Clone the repository:
+   git clone https://github.com/Nettem-Rakesh/ReadyMyFood.git
+
+2. Install dependencies:
    pip install -r Requirements.txt
 
-2. Run migrations:
+3. Apply migrations:
    python manage.py migrate
 
-3. Start the server:
+4. Run the server:
    python manage.py runserver
+
+## Author
+
+Nettem Rakesh 
